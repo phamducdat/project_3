@@ -10,15 +10,12 @@
     "data": "node esp32simulator"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/phamducdat/IT4735-backend.git"
+    "type": "git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/phamducdat/IT4735-backend/issues"
   },
-  "homepage": "https://github.com/phamducdat/IT4735-backend#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
