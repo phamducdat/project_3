@@ -61,12 +61,12 @@ export default function   DeviceDetail({ item, info }) {
           <OverViewSectionTitle>Thời tiết</OverViewSectionTitle>
           <OverViewTittle>Thời tiết hiện tại ở vị trí thiết bị {item?.deviceName || "Hanoi"} ra sao?</OverViewTittle>
         </div>
-        <img
-          src={`/aqi/${info?.current?.weather?.ic || `01d`}.png`}
-          alt="img"
-          width={100}
-          height={100}
-          style={{ right: 0, position: 'absolute', marginRight: 40, paddingBottom: 30 }} />
+        {/*<img*/}
+        {/*  src={`/aqi/${info?.current?.weather?.ic || `01d`}.png`}*/}
+        {/*  alt="img"*/}
+        {/*  width={100}*/}
+        {/*  height={100}*/}
+        {/*  style={{ right: 0, position: 'absolute', marginRight: 40, paddingBottom: 30 }} />*/}
       </OverViewDetail>
     
       <TableDetail>

@@ -1,10 +1,10 @@
-import React, { memo } from 'react'
-import LineChart from './components/LineChart'
-import { StatisticsContextProvider, useStatisticsContext } from './context'
+import React from 'react'
+import {StatisticsContextProvider, useStatisticsContext} from './context'
 import NavTop from '../../layout/components/NavTop/NavTop';
 import BarChart from './components/BarChart';
 import DeviceLocation from './components/DeviceLocation';
 import DeviceDetail from './components/DeviceDetail';
+
 const StatisticsImpl = () => {
   const { device, nearestCity } = useStatisticsContext()
 

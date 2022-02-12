@@ -30,7 +30,7 @@ DeviceSchema.statics = {
                 _id: new mongoose.Types.ObjectId,
                 embedId:data.embedId,
                 deviceName: data.deviceName,
-                connectState: "OFF",
+                connectState: data.connectState,
                 location: data.location,
                 userId: data.userId,
                 stateHistory: data.stateHistory,
