@@ -24,12 +24,13 @@ const OverViewSectionTitle = styled.h3`
 const OverViewTittle = styled.h3`
 ${tw`mb-2 font-medium text-xl tracking-normal mb-8 w-full`}`
 
-export default function DeviceDetail({ item, info }) {
+export default function   DeviceDetail({ item, info }) {
   console.log('info', info?.current?.weather?.ic);
   return <div style={{display:'block'}}>
 <div className='aqi-overview-device'>
     <div style={{ display: 'block', padding: '1rem' }}>
       <h2>Device's id: {item?._id}</h2>
+      <h2>Embed's id: {item?.embedId}</h2>
       <h2>Device's name: {item?.deviceName}</h2>
       <h2>Device's userid: {item?.userId}</h2>
     </div>
@@ -72,19 +73,20 @@ export default function DeviceDetail({ item, info }) {
         <tbody>
           <TableWeatherTr style={{ background: '#BED6E3' }}>
             <TableWeatherTd  >Nồng độ CO2</TableWeatherTd>
-            <TableWeatherTd style={{ fontWeight: 600, borderRadius: '0 0.625rem  0.625rem 0' }}>{item?.stateHistory[0]?.co2}</TableWeatherTd>
-          </TableWeatherTr>
-          <TableWeatherTr>
-            <TableWeatherTd >Nhiệt độ</TableWeatherTd>
-            <TableWeatherTd style={{ fontWeight: 600, borderRadius: '0 0.625rem  0.625rem 0' }}>{item?.stateHistory[0]?.temperature}</TableWeatherTd>
-          </TableWeatherTr>
-          <TableWeatherTr style={{ background: '#BED6E3' }}>
-            <TableWeatherTd >Độ ẩm</TableWeatherTd>
-            <TableWeatherTd style={{ fontWeight: 600, borderRadius: '0 0.625rem  0.625rem 0' }}>{item?.stateHistory[0]?.humidity}</TableWeatherTd>
+            <TableWeatherTd style={{ fontWeight: 600, borderRadius: '0 0.625rem  0.625rem 0' }}>{item?.stateHistory[item.stateHistory.length - 2]?.co2}</TableWeatherTd>
           </TableWeatherTr>
           <TableWeatherTr>
             <TableWeatherTd >Độ bụi</TableWeatherTd>
-            <TableWeatherTd style={{ fontWeight: 600, borderRadius: '0 0.625rem  0.625rem 0' }}>{item?.stateHistory[0]?.dust}</TableWeatherTd>
+            <TableWeatherTd style={{ fontWeight: 600, borderRadius: '0 0.625rem  0.625rem 0' }}>{item?.stateHistory[item.stateHistory.length - 2]?.dust}</TableWeatherTd>
+          </TableWeatherTr>
+          <TableWeatherTr style={{ background: '#BED6E3' }}>
+            <TableWeatherTd >Độ ẩm</TableWeatherTd>
+            <TableWeatherTd style={{ fontWeight: 600, borderRadius: '0 0.625rem  0.625rem 0' }}>{item?.stateHistory[item.stateHistory.length - 2]?.humidity}</TableWeatherTd>
+          </TableWeatherTr>
+
+          <TableWeatherTr>
+            <TableWeatherTd >Nhiệt độ</TableWeatherTd>
+            <TableWeatherTd style={{ fontWeight: 600, borderRadius: '0 0.625rem  0.625rem 0' }}>{item?.stateHistory[item.stateHistory.length - 2]?.temperature}</TableWeatherTd>
           </TableWeatherTr>
         </tbody>
       </TableDetail>

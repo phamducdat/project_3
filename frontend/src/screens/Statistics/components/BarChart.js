@@ -57,20 +57,6 @@ const BarChart = ({ deviceItem }) => {
   temperature = temperature.slice(temperature?.length - 11, temperature?.length - 1).reverse()
 
 
-  //   const data = {
-  //     label,
-  //     datasets: [
-  //       {
-  //         label: 'CO2',
-  //         data: co2,
-  //         borderColor: 'red',
-  //         backgroundColor: 'red',
-  //       },
-  //     ]
-  //   };
-
-
-  // return <Bar options={options} data={data} />
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', maxHeight:'100vh' }}>
       <Bar
