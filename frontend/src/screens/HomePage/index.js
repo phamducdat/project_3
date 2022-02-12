@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <>
       <NavTop />
-      <WorldMap />
+      {/*<WorldMap />*/}
       <div className="blob"></div>
       <Cards />
       <Footer />

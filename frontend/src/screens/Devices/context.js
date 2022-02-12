@@ -33,6 +33,9 @@ export const DevicesContextProvider = ({ children }) => {
     const res = await deleteDeviceById(id)
     if (!res?.error) {
       toastSuccess("Delete Complete!")
+      await getListDevices()
+      window.location.reload()
+
     } else {
       toastError("Delete Incomplete!")
     }

@@ -27,7 +27,7 @@ const AddModal = () => {
           }}>
             <div className="modal-close" onClick={() => setOpenAddModal(false)}><X /></div>
             <h1 style={{ color: 'black' }}>Device</h1><br />
-            <LabelText>Device Id</LabelText>
+            <LabelText>Embed Id</LabelText>
             <input type="text" className='inputdevice' placeholder='Embed ID' onChange={(e) => setDeviceId(e.target.value)} />
             <LabelText>Device Name</LabelText>
             <input type="text" className='inputdevice' placeholder='Device Name' onChange={(e) => setDeviceName(e.target.value)} />
