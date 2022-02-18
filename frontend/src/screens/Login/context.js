@@ -21,9 +21,10 @@ export const LoginContextProvider = ({ children }) => {
     let params = JSON.parse(tmp)
     if (username && password) {
       const response = await signup(params)
-      if (response?.password) {
-        console.log(`response?.password`, response?.password)
+      if (response?.token) {
+        console.log(`response?.token`, response?.token)
         toastSuccess("Success Notification !")
+        await setCookie("currentuser", response?.token)
         setTimeout(() => window.location.reload(), 2000)
         // navigate('/')
       }
